@@ -7,12 +7,12 @@ This multiplication aims to directly yield the result of multiplication between 
 # Main aspects improved in EEP1
 1) Designed the `ADD889` block, comprised of one 8-bit adder which has its `COUT` and `SUM` connected as a 9-bit output value;
    ![image](https://github.com/user-attachments/assets/88735951-0efe-4398-b232-fbec647e0644)
-2) Designed a `8*8 multiplication block` which **outputs a 16-bit number**, including seven `ADD889` blocks;
+2) Designed an `8*8 multiplication block` which **outputs a 16-bit number**, including seven `ADD889` blocks;
    ![image](https://github.com/user-attachments/assets/d91845a9-7e2f-4e35-aee4-4450a59ca656)
-3) Designed a `MLU` (short for `Multiplication Unit`) which takes another 8-bit adder and the multiplication block to perform multiplication;
+3) Designed an `MLU` (short for `Multiplication Unit`) which takes another 8-bit adder and the multiplication block to perform multiplication;
    ![image](https://github.com/user-attachments/assets/9a37a417-3de3-46a4-80f3-d93c440b1d7d)
 4) Used spare bits of INS according to the lab handout (see below);
-5) Updated `DPDECODE` block and `DATAPATH` sheet for smooth output and new instruction selection.
+5) Updated `DPDECODE` block and `DATAPATH` sheet for correct output and new instruction selection, without inteferencing exesting ones.
    ![image](https://github.com/user-attachments/assets/4e506c86-cf38-453b-aa79-10d6519e05b7)
 
 A sample test file is also included, named `multest.txt` (with its corresponding `.dgm` file).
