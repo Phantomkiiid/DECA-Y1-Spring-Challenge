@@ -12,10 +12,10 @@ This is the repo for my DECA Y1 Spring Term Challenge work (multiplication speed
 5) Updated `DPDECODE` block and `DATAPATH` sheet for smooth output and new instruction selection.
    ![image](https://github.com/user-attachments/assets/4e506c86-cf38-453b-aa79-10d6519e05b7)
 
-A sample test file is also included, named `multest.txt` (with its corresponding .dgm file).
+A sample test file is also included, named `multest.txt` (with its corresponding `.dgm` file).
 
 Before introducing new instructions, some formats are described here:
-Our inputs are from `Ra(16:0)` and `Rb(16:0)`, with final output `Ra(16:0)` which is the Least Significant 16 bits of the multiplied result.
+Our inputs are from `Ra(15:0)` and `Rb(15:0)`, with final output `Ra(15:0)` which is the Least Significant 16 bits of the multiplied result.
 
 # New instructions included
 `MOVC1, Ra, Rb` -> `Ra = PPR := Ra(7:0) * Rb(7:0)` <br>
