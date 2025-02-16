@@ -12,7 +12,7 @@ This multiplication aims to directly yield the result of multiplication between 
 3) Designed an `MLU` (short for `Multiplication Unit`) which takes another 8-bit adder and the multiplication block to perform multiplication;
    ![image](https://github.com/user-attachments/assets/9a37a417-3de3-46a4-80f3-d93c440b1d7d)
 4) Used spare bits of INS according to the lab handout (see below);
-5) Updated `DPDECODE` block and `DATAPATH` sheet for correct output and new instruction selection, without inteferencing exesting ones.
+5) Updated `DPDECODE` block and `DATAPATH` sheet for correct output and new instruction selection, without inteferencing existing ones.
    ![image](https://github.com/user-attachments/assets/4e506c86-cf38-453b-aa79-10d6519e05b7)
 
 A sample test file is also included, named `multest.txt` (with its corresponding `.dgm` file).
