@@ -2,9 +2,9 @@
 This is the repo for my DECA Y1 Spring Term Challenge work (multiplication speed-up design).
 
 # Version 1 Design Inspirations (Feb 16th)
-* This multiplication aims to directly yield the result of multiplication between two 16-bit numbers, `A(15:0)` and `B(15:0)`. As the main multiplication block takes only two 8-bit numbers (due to full adder constraints), `A` and `B` are split into two parts each - `AL = A(7:0)`, `AH = A(15:8)`, `BL = B(7:0)`, and `BH = B(15:8)`. It is easily proved that `A * B = AL * BL + 256(AL * BH + AH * BL) + 65536(AH * BH)`. Hence, if only the **least significant (LS) 16 bits** are desired (suitable to store in a single register), it is proposed that `{A * B}(15:0) = {AL * BL + 256(AL * BH + AH * BL)}(15:0)`, without considering the `AH * BH` part which would purely contribute to the most significant (MS) 16 bits of the result.
+* This multiplication aims to directly yield the result of multiplication between two 16-bit numbers, `A(15:0)` and `B(15:0)`. As the main multiplication block takes only two 8-bit numbers (due to full adder constraints), `A` and `B` are split into two parts each - `AL = A(7:0)`, `AH = A(15:8)`, `BL = B(7:0)`, and `BH = B(15:8)`. It is easily proved that `A * B = AL * BL + 256(AL * BH + AH * BL) + 65536(AH * BH)`. Hence, if only the **least significant (LS) 16 bits** are desired (suitable to store in a single register), it is proposed that `{A * B}(15:0) = {AL * BL + 256(AL * BH + AH * BL)}(15:0)`, without considering the `AH * BH` part which would purely contribute to the most significant (MS) 16 bits of the final product.
 
-* Note: This Version 1 Design utilizes a total of **64 full-adders** (which is the limit given in lab handout).
+* Note: Version 1 Design utilizes a total of **64 full-adders** (which is the limit given in lab handout), and outputs only the **least significant (LS) 16 bits** of the final product to `Ra`.
 
 # Main aspects improved in EEP1
 1) Designed the `ADD889` block, comprised of one 8-bit adder which has its `COUT` and `SUM` connected as a 9-bit output value; <br>
