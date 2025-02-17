@@ -37,6 +37,7 @@ Before introducing new instructions, some formats are described here: Our inputs
 
 # Version 2 Design (Feb 17th)
 * Based on the same design principle of Version 1 Multiplier, the higher 16 bits of the results are also taken into consideration. It is proposed that `{A * B}(15:0) = {AL * BL + 256(AL * BH + AH * BL) + 65536(AH * BH)}(15:0)`, as well as `{A * B}(31:16) = {AL * BL + 256(AL * BH + AH * BL) + 65536(AH * BH)}(31:16)`.
+* In Version 2 design, the **full 32-bit product** could be obtained, and only **56 full-adders** are used.
 
 # Main aspects improved
 * The internal structure of the MLU is improved to support more newly-defined instructions, and the output values are more meaningful - which contributes the output of the overall product. <br>
