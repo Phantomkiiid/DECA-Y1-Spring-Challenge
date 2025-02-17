@@ -95,7 +95,7 @@ Hence, if not considering the two `MOV` instructions at the start, the overall m
 `0x0B` `ADC R1, R1, R2` <br>
 `0x0C` `MOVC6 R2, R1` <br>
 
-The above instructions would calculate `0x01C5115B`, stored in `Reg1` abd `Reg2`, which is the correct product. <br>
+The above instructions calculate the product of `0xFCB1` and `0x01CB` and yield `0x01C5115B` as the final product, stored in `Reg1` abd `Reg2`, which is the correct result. <br>
 
 A waveform simulation of the above instructions was done in Issie: <br>
 ![image](https://github.com/user-attachments/assets/48dd3e42-23c5-4a1b-b2d9-63d60aa51a78)
