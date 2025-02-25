@@ -64,7 +64,7 @@ Note: in the following comments, `RxL` means `Rx(7:0)` and `RxH` means `Rx(15:8)
 * `MOVC5 Ra, Rb` &emsp;  // `PPR := PPR`; `Ra(15:0) := RaH * RbH` <br>
 * `MOVC6 Ra, Rb` &emsp;  // `PPR := PPR`; `Ra(15:0) := PPR(15:0)` -> get LS 16 bits of the final product <br>
 
-Note that the above instructions should be used **in particular sequence**, demonstrated below, to achieve the equivalent result of `Ra := {Ra * Rb}(31:16)` and `Rb := {Ra * Rb}(15:0)`: <br>
+Note that the above instructions should be used **in particular sequence** (i.e. as a **subroutine**), demonstrated below, to achieve the equivalent result of `Ra := {Ra * Rb}(31:16)` and `Rb := {Ra * Rb}(15:0)`: <br>
 
 `0x00` `MOV Ra, #num_1` <br>
 `0x01` `MOV Rb, #num_2` <br>
@@ -95,7 +95,7 @@ Hence, if not considering the two `MOV` instructions at the start, the overall m
 `0x0B` `ADC R1, R1, R2` <br>
 `0x0C` `MOVC6 R2, R1` <br>
 
-The above instructions calculate the product of `0xFCB1` and `0x01CB` and yield `0x01C5115B` as the final product, stored in `Reg1` abd `Reg2`, which is the correct result. <br>
+The above instructions calculate the product of `0xFCB1` and `0x01CB` and yield `0x01C5115B` as the final product, stored in `Reg1` and `Reg2`, which is the correct result. <br>
 
 A waveform simulation of the above instructions was done in Issie: <br>
 ![image](https://github.com/user-attachments/assets/48dd3e42-23c5-4a1b-b2d9-63d60aa51a78)
