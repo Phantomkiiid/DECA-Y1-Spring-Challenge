@@ -73,7 +73,7 @@ Note that the above instructions should be used **in particular sequence**, demo
 `0x04` `ADD Ra, Ra, Rb` &emsp;  // sum updated to `Ra` <br>
 `0x05` `MOVC3 Rb, Ra` &emsp;&ensp;  // `Rb` loaded with `XXXX XXXX XXXX XXXX` from `MUL` <br>
 `0x06` `ADD Ra, Ra, Rb` &emsp;  // sum updated to `Ra`, which is the correct bit sequence of the final product (from the 8th to the 23rd bit) <br>
-`0x07` `MOVC4 Ra, Rb` &emsp;&ensp;  // `PPL` has its 8th to 23rd bits updated to `Ra`; meanwhile, `Ra` has its internal bits shifted 8 positions leftwards <br>
+`0x07` `MOVC4 Ra, Rb` &emsp;&ensp;  // `PPL` has its 8th to 23rd bits updated to `Ra`; meanwhile, `Ra` has its internal bits shifted 8 positions rightwards <br>
 `0x08` `MOVC5 Rb, Ra` &emsp;&ensp;   // `Rb` loaded with `XXXX XXXX XXXX XXXX` from `MUL` (which is `AH * BH`) <br>
 `0x09` `ADC Ra, Ra, Rb` &emsp;  // `ADC` takes `FlagC` into account; the content of `Ra` is itself the MS part of the final product <br>
 `0x0A` `MOVC6 Rb, Ra` &emsp;&ensp;  // `Rb` loaded with the LS part of the final product from `PPL` <br>
