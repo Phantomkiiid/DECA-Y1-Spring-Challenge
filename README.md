@@ -1,4 +1,4 @@
-# DECA-Y1-Spring-Challenge
+# DECA-Y1-Spring-Challenge-1: Multiplication Speed-up
 This is the repo for my DECA Y1 Spring Term Challenge work (multiplication speed-up design).
 
 # Version 1 Design Inspirations (Feb 16th)
